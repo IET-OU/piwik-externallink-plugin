@@ -1,0 +1,17 @@
+/*
+ N.D.Freear, 22 August 2012.
+*/
+
+/* Accessibility/usability - restore link outlines.
+*/
+a:hover, a:focus{ outline:1px solid orange; }
+#logo a{ display:inline-block; height:auto; }
+#menu a:hover{ outline:none; }
+
+div#topBars a{ padding:5px 3px; }
+div#topBars a:hover, #topBars a:focus{ background-color:#eee; }
+
+
+/* ExternalLink - visual differentiation.
+*/
+div#topLeftBar /*.topBarElem*/ a#topmenu-externallink{ background-color:#e8e8e8; border:1px solid #ccc; }
