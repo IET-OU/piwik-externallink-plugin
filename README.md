@@ -25,7 +25,7 @@ It adds configurable external links to the top menu of a Piwik installation.
 
 piwik-externallink-plugin: Copyright 2012 The Open University.
 
-* License: [GNU General Public License v2 or later](http://gnu.org/licenses/old-licenses/gpl-2.0.html)
+* License: [GNU General Public License v2 or later](http://gnu.org/licenses/gpl-2.0.html).
 
 ## Credits
 
