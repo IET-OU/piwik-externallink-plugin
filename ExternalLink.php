@@ -30,14 +30,12 @@ class Piwik_ExternalLink extends Piwik_Plugin
 	public function getInformation()
 	{
 		return array(
-			'description' =>
-			'* Add a link to the Piwik site top menu, pointing to an external site [JISC Track OER project]',
-			#'__description' => Piwik_Translate('ExternalLink_PluginDescription'),
+			'description' => Piwik_Translate('ExternalLink_PluginDescription'),
 			'homepage' => 'http://track.olnet.org/',
 			'author' => 'IET at The Open University',
 			'author_homepage' => 'http://iet.open.ac.uk/',
 			'version' => '0.1',
-			#'translationAvailable' => true,
+			'translationAvailable' => true,
 		);
 	}
 
