@@ -14,6 +14,11 @@ It adds configurable external links to the top menu of a Piwik installation.
     cd {PIWIK}/plugins
     git clone git@github.com:IET-OU/piwik-externallink-plugin.git ExternalLink
 
+    # Or, get our Piwik fork, with plugin submodules,
+    cd {DOCUMENT_ROOT}
+    git clone --recursive git@github:IET-OU/piwik-trackoer.git piwik
+
+    # Enable the plugin in the Piwik administrator interface..
 
 ## Links
 
