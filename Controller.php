@@ -20,8 +20,7 @@ class Piwik_ExternalLink_Controller extends Piwik_Controller
 {
 
 	/**
-	 * Output redirection page instead of linking directly to avoid
-	 * exposing the referrer on the Piwik demo.
+	 * Output redirection page.
 	 * @see Proxy::redirect
 	 *
 	 * @param string $url (via $_GET)
@@ -56,22 +55,6 @@ class Piwik_ExternalLink_Controller extends Piwik_Controller
 			Piwik_Common::sendHeader('HTTP/1.1 302 Found');
 			Piwik_Common::sendHeader('Location: '. $url);
 		}
-
-		exit;
-	}
-
-	public function __redirect()
-	{
-
-        $url = Piwik_Config::getInstance()->ExternalLink['url'];
-		if (! $url) {
-			$base_url = Piwik::getPiwikUrl();
-
-			$url = str_replace('piwik/', '', $base_url);
-		}
-
-		header('HTTP/1.1 302 Found');
-		header('Location: '. $url);
 
 		exit;
 	}
