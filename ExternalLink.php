@@ -15,8 +15,10 @@
  Example plugin configuration -- config/config.ini.php
 
 [ExternalLink]
-links["http://track.olnet.org"] = "Project Home"
-links["http://blog.olnet.org"] = "Blog"
+urls[] = "http://track.olnet.org/"
+labels[] = "Track OER Home"
+urls[] = "http://example.org"
+labels[] = "Example.org"
 
 
 */
@@ -82,10 +84,11 @@ class Piwik_ExternalLink extends Piwik_Plugin
 	protected function getConfigLinks()
 	{
 		$config = Piwik_Config::getInstance()->ExternalLink;
-		if (isset($config['links']))
+		$links = array();
+		if (isset($config['urls']) && isset($config['labels']) )
 		{
-			return $config['links'];
+			$links = array_combine($config['urls'], $config['labels']);
 		}
-		return array();
+		return $links;
 	}
 }
